@@ -7,21 +7,23 @@ xhr.addEventListener('readystatechange', function () {
 	if (this.readyState === this.DONE) {
 		let resultado = JSON.parse (this.response)
 		console.log(this.responseText);
-		document.getElementById ("%"). value = resultado. percentage
-	}
+		document.getElementById ("%"). innerHTML = resultado. percentage + "%"
+	
 	if(parseInt(resultado.percentage) < 20){
-        document.getElementById("foto").src="./img/corazon partido.webp"
-	}if(parseInt(resultado.percentage) = 50){
-        document.getElementById("foto").src="./buenos amigos.webp"
+        document.getElementById("foto").src="./img/corazonpartido.webp"
+	}if(parseInt(resultado.percentage) >=  20 && resultado.percentage < 50){
+        document.getElementById("foto").src="./img/buenosamigos.webp"
 	}
-	if(parseInt(resultado.percentage) > 50){
-        document.getElementById("foto").src="./img/kiss.png"
-	}if(parseInt(resultado.percentage) > 75){
-        document.getElementById("foto").src="./img/pareja.png"
+	if(parseInt(resultado.percentage)>= 50 && resultado.percentage < 75){
+        document.getElementById("foto").src = "./img/kiss.png"
+	}if(parseInt(resultado.percentage)>= 75  && resultado.percentage < 99){
+        document.getElementById("foto").src ="./img/pareja.png"
 	}
-	if(parseInt(resultado.percentage) > 99){
+	if(parseInt(resultado.percentage) >= 99){
         document.getElementById("foto").src="./img/anillo.png"
 	}
+	}
+	document.getElementById("foto").style = "width: 10%"
 });
 
 document.getElementById ("buto").addEventListener ("click", function(){
