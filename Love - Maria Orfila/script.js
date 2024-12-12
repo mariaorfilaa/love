@@ -11,19 +11,27 @@ xhr.addEventListener('readystatechange', function () {
 	
 	if(parseInt(resultado.percentage) < 20){
         document.getElementById("foto").src="./img/corazonpartido.webp"
+		document.getElementById("r").innerHTML = "Búscate a otro..."
 	}if(parseInt(resultado.percentage) >=  20 && resultado.percentage < 50){
-        document.getElementById("foto").src="./img/buenosamigos.webp"
+        document.getElementById("foto").src="./img/amigos.webp"
+		document.getElementById("r").innerHTML = "Solo sereis buenos amigos"
 	}
 	if(parseInt(resultado.percentage)>= 50 && resultado.percentage < 75){
         document.getElementById("foto").src = "./img/kiss.png"
+		document.getElementById("r").innerHTML = "No te emociones..."
 	}if(parseInt(resultado.percentage)>= 75  && resultado.percentage < 99){
         document.getElementById("foto").src ="./img/pareja.png"
+		document.getElementById("r").innerHTML = "Esto va para largo"
 	}
 	if(parseInt(resultado.percentage) >= 99){
         document.getElementById("foto").src="./img/anillo.png"
+		document.getElementById("r").innerHTML = "¡Almas gemelas!"
 	}
+	document.getElementById("foto").style = "width: 8%"
+	document.getElementById("foto").classList += "transition-img"
 	}
-	document.getElementById("foto").style = "width: 10%"
+	
+	
 });
 
 document.getElementById ("buto").addEventListener ("click", function(){

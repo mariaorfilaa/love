@@ -3,17 +3,19 @@ html, body{
     text-align: center;
     margin: 0;
     padding: 0;
-    background-color: rgb(172, 38, 107);
-
+    background-color: rgb(179, 0, 0);
+    margin-top: 20px;
 }
 
 img{
-    width: 12%;
+    width: 13%;
     margin: 0 auto;
     position: center;
+    margin-bottom: -20px;
 }
+
 input{
-    color:rgb(158, 6, 90);
+    color: rgb(179, 0, 0);
     background-color:white;
     border-color:black;
     padding: 8px;
@@ -25,8 +27,8 @@ input{
 }
 
 button{
-    background-color: rgb(246, 145, 236);
-    color:  rgb(172, 38, 107);
+    background-color:rgb(0, 0, 0);
+    color: rgb(179, 0, 0);
     border-color: black;
     border-radius: 8px;
     padding: 8px;
@@ -34,9 +36,8 @@ button{
     margin: 8px 0;
     text-align: center;
     font-family:Georgia, 'Times New Roman', Times, serif;
-
-
 }
+
 ul li{
     text-align: center;
     background-color: rgb(255, 255, 254);
@@ -46,3 +47,13 @@ ul li{
     text-align: center;
 }
 
+h1{
+   position: center; 
+    color: white;
+}
+
+.transition-img{
+    animation:rotate-scale-down 1s linear both}
+    @keyframes rotate-scale-down
+    {0%{transform:scale(1) rotateZ(0)}50%{transform:scale(.5) rotateZ(180deg)}100%{transform:scale(1) rotateZ(360deg)}
+}
